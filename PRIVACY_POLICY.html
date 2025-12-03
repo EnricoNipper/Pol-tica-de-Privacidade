@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Automação de Registro de Tempo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4F46E5;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #4F46E5;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #E0E7FF;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #6366F1;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p, li {
+            margin-bottom: 12px;
+            color: #555;
+        }
+        ul {
+            margin-left: 25px;
+        }
+        strong {
+            color: #333;
+        }
+        .meta {
+            background: #F0F9FF;
+            padding: 15px;
+            border-left: 4px solid #4F46E5;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .highlight {
+            background: #FEF3C7;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        code {
+            background: #F3F4F6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Política de Privacidade</h1>
+        <p><strong>Extensão:</strong> Automação de Registro de Tempo</p>
+        <div class="meta">
+            <p><strong>📅 Última atualização:</strong> 3 de dezembro de 2025</p>
+            <p><strong>🏢 Desenvolvedor:</strong> Pixforce Maps</p>
+            <p><strong>📦 Versão:</strong> 1.1</p>
+        </div>
+
+        <h2>1. Introdução</h2>
+        <p>Esta extensão do Google Chrome foi desenvolvida para <span class="highlight">automatizar o registro de horas trabalhadas</span>, consolidando dados do TiqueTaque (sistema de ponto eletrônico) e Google Calendar (eventos de reunião) e enviando-os ao sistema Timesheet Pixforce.</p>
+
+        <h2>2. Dados Coletados</h2>
+        
+        <h3>2.1 Informações de Autenticação</h3>
+        <ul>
+            <li><strong>Token OAuth do Google:</strong> Utilizado exclusivamente para acessar eventos do Google Calendar do usuário</li>
+            <li><strong>Token do Timesheet Pixforce:</strong> Obtido via cookies do sistema para enviar registros de tempo</li>
+            <li><strong>ID do funcionário TiqueTaque:</strong> Necessário para buscar registros de ponto</li>
+        </ul>
+
+        <h3>2.2 Dados Processados</h3>
+        <ul>
+            <li><strong>Eventos do Google Calendar:</strong> Títulos de reuniões, horários de início/fim, localização e número de participantes</li>
+            <li><strong>Registros de Ponto (TiqueTaque):</strong> Horários de entrada e saída registrados no sistema de ponto</li>
+            <li><strong>Configurações do usuário:</strong> Projeto padrão, atividade fallback e observações personalizadas</li>
+        </ul>
+
+        <h2>3. Como Usamos os Dados</h2>
+        
+        <h3>3.1 Propósito Único</h3>
+        <p>Os dados são utilizados <strong>exclusivamente</strong> para:</p>
+        <ul>
+            <li>Consolidar automaticamente registros de ponto e reuniões</li>
+            <li>Preencher lacunas com atividade padrão (fallback)</li>
+            <li>Enviar registros consolidados ao Timesheet Pixforce</li>
+        </ul>
+
+        <h3>3.2 Armazenamento Local</h3>
+        <ul>
+            <li>Todas as configurações são armazenadas localmente no dispositivo via <code>chrome.storage.local</code></li>
+            <li>Nenhum dado é enviado a servidores de terceiros além dos sistemas integrados (Google Calendar, TiqueTaque, Timesheet Pixforce)</li>
+        </ul>
+
+        <h2>4. Compartilhamento de Dados</h2>
+        
+        <h3>4.1 Não Vendemos Dados</h3>
+        <p><strong>Declaramos que NÃO:</strong></p>
+        <ul>
+            <li>❌ Vendemos ou transferimos dados de usuários a terceiros</li>
+            <li>❌ Usamos dados para fins não relacionados ao registro de tempo</li>
+            <li>❌ Compartilhamos dados para fins de análise de crédito ou empréstimos</li>
+        </ul>
+
+        <h3>4.2 APIs de Terceiros</h3>
+        <p>A extensão se comunica apenas com:</p>
+        <ul>
+            <li><strong>Google Calendar API:</strong> Para buscar eventos de reunião</li>
+            <li><strong>API TiqueTaque:</strong> Para buscar registros de ponto</li>
+            <li><strong>Timesheet Pixforce:</strong> Para enviar registros consolidados</li>
+        </ul>
+
+        <h2>5. Segurança</h2>
+        <ul>
+            <li>🔐 Tokens de autenticação são armazenados de forma segura via <code>chrome.identity</code> e <code>chrome.storage</code></li>
+            <li>🔒 Comunicação com APIs usa HTTPS (criptografia TLS)</li>
+            <li>🚫 Nenhum dado sensível é registrado em logs públicos</li>
+        </ul>
+
+        <h2>6. Permissões Necessárias</h2>
+        
+        <h3>6.1 Justificativa de Permissões</h3>
+        <ul>
+            <li><code>identity</code> - Autenticação OAuth com Google Calendar</li>
+            <li><code>storage</code> - Armazenar configurações localmente</li>
+            <li><code>cookies</code> - Acessar token do Timesheet Pixforce</li>
+            <li><code>tabs</code> - Detectar autenticação no Timesheet</li>
+            <li><code>host_permissions</code> - Comunicação com APIs (Calendar, TiqueTaque, Timesheet)</li>
+        </ul>
+
+        <h2>7. Controle do Usuário</h2>
+        
+        <h3>7.1 Remoção de Dados</h3>
+        <ul>
+            <li>Desinstalar a extensão remove automaticamente todos os dados armazenados localmente</li>
+            <li>Revogar acesso ao Google Calendar em <a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a></li>
+        </ul>
+
+        <h3>7.2 Transparência</h3>
+        <ul>
+            <li>Todo o código-fonte está disponível para auditoria</li>
+            <li>Nenhum código remoto é executado (sem <code>eval()</code>, scripts externos)</li>
+        </ul>
+
+        <h2>8. Conformidade com LGPD/GDPR</h2>
+        <ul>
+            <li>✅ Coletamos apenas dados essenciais para o funcionamento da extensão</li>
+            <li>✅ Usuário tem controle total sobre seus dados</li>
+            <li>✅ Dados não são retidos após desinstalação</li>
+        </ul>
+
+        <h2>9. Alterações nesta Política</h2>
+        <p>Notificaremos usuários sobre mudanças significativas via atualização da extensão.</p>
+
+        <h2>10. Contato</h2>
+        <p>Para dúvidas sobre privacidade:</p>
+        <ul>
+            <li><strong>📧 Email:</strong> [SEU_EMAIL@pixforce.com]</li>
+            <li><strong>🏢 Empresa:</strong> Pixforce Maps</li>
+            <li><strong>🌐 Website:</strong> <a href="https://www.pixforcemaps.com" target="_blank">https://www.pixforcemaps.com</a></li>
+        </ul>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #E5E7EB;">
+        
+        <p style="text-align: center; color: #9CA3AF; font-size: 0.9em;">
+            <strong>Versão da Extensão:</strong> 1.1 | 
+            <strong>Manifesto Version:</strong> 3 | 
+            <strong>Publicado em:</strong> Chrome Web Store
+        </p>
+    </div>
+</body>
+</html>
