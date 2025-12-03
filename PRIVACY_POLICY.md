@@ -4,7 +4,9 @@
 
 ## 1. Introdução
 
-Esta extensão do Google Chrome ("Automação de Registro de Tempo") foi desenvolvida para automatizar o registro de horas trabalhadas, consolidando dados do TiqueTaque (sistema de ponto eletrônico) e Google Calendar (eventos de reunião) e enviando-os ao sistema Timesheet Pixforce.
+Esta extensão do Google Chrome foi desenvolvida **exclusivamente para uso interno da Pixforce**, com o objetivo de **facilitar tarefas repetitivas dos funcionários** ao automatizar o registro de horas trabalhadas. A extensão consolida dados do TiqueTaque (sistema de ponto eletrônico) e Google Calendar (eventos de reunião) e os envia ao sistema Timesheet Pixforce, eliminando o preenchimento manual diário.
+
+**⚠️ Importante:** Esta é uma ferramenta de uso corporativo interno, destinada apenas aos colaboradores da Pixforce para otimizar processos internos.
 
 ## 2. Dados Coletados
 
@@ -21,10 +23,13 @@ Esta extensão do Google Chrome ("Automação de Registro de Tempo") foi desenvo
 ## 3. Como Usamos os Dados
 
 ### 3.1 Propósito Único
-Os dados são utilizados **exclusivamente** para:
+Os dados são utilizados **exclusivamente para uso interno da empresa** com os seguintes propósitos:
+- Facilitar o trabalho diário dos funcionários, eliminando preenchimentos manuais repetitivos
 - Consolidar automaticamente registros de ponto e reuniões
 - Preencher lacunas com atividade padrão (fallback)
 - Enviar registros consolidados ao Timesheet Pixforce
+
+**📌 Nota:** A extensão NÃO compartilha dados com entidades externas. Todo o processamento é feito localmente e os dados são enviados apenas para os sistemas corporativos da Pixforce.
 
 ### 3.2 Armazenamento Local
 - Todas as configurações são armazenadas localmente no dispositivo via `chrome.storage.local`
@@ -32,17 +37,20 @@ Os dados são utilizados **exclusivamente** para:
 
 ## 4. Compartilhamento de Dados
 
-### 4.1 Não Vendemos Dados
-**Declaramos que NÃO:**
+### 4.1 Uso Interno - Não Vendemos Dados
+**Esta é uma ferramenta corporativa de uso interno.** Declaramos que NÃO:
 - Vendemos ou transferimos dados de usuários a terceiros
 - Usamos dados para fins não relacionados ao registro de tempo
 - Compartilhamos dados para fins de análise de crédito ou empréstimos
+- Distribuímos a extensão publicamente (uso restrito aos funcionários da Pixforce)
 
-### 4.2 APIs de Terceiros
-A extensão se comunica apenas com:
-- **Google Calendar API**: Para buscar eventos de reunião
-- **API TiqueTaque**: Para buscar registros de ponto
-- **Timesheet Pixforce**: Para enviar registros consolidados
+### 4.2 Sistemas Corporativos Integrados
+A extensão se comunica apenas com **sistemas internos da Pixforce e ferramentas corporativas**:
+- **Google Calendar API**: Para buscar eventos de reunião (Google Workspace corporativo)
+- **API TiqueTaque**: Para buscar registros de ponto eletrônico
+- **Timesheet Pixforce**: Para enviar registros consolidados (sistema interno)
+
+**🔒 Segurança:** Todas as comunicações são internas ou com serviços corporativos autorizados pela empresa.
 
 ## 5. Segurança
 
